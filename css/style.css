@@ -781,7 +781,7 @@ input[type="submit"]{
 @media screen and (min-width:321px){
 
     .desktop{
-        display:inline-block;
+        display:block;
     }
 
     .mobile__first{
@@ -1253,16 +1253,16 @@ input[type="submit"]{
 
     .clients__logo{
         margin-right: 26px;
-        width: 390px;
+        width: 22%;
     }
 
     .clients__logoOne{
         margin-right: 64px;
-        width: 353px;
+        width: 20%;  /*353px*/
     }
 
     .clients__logoFour{
-        width: 400px;
+        width: 23%;
     }
 
     .main__app__button{
@@ -1284,12 +1284,9 @@ input[type="submit"]{
     .footer__codefade{
         width: 892px;
         height: 453px;
-    }
-
-    .footer__codefade{
-        position: relative;
-        left:-200px;
-        bottom: 180px;
+        position: absolute;
+        top: 5700px;
+        right:770px;
     }
 
     .footer__content{
@@ -1330,14 +1327,6 @@ input[type="submit"]{
 
     .footer__form{
         margin-left: 98px;
-    }
-
-    .footer__contacts{
-        max-width: 1920px;
-        width: 100%;
-        height: 240px;
-        background-color: rgba(32, 32, 32, 1);
-        display: flex;
     }
 
     .mane__form{
@@ -1406,6 +1395,17 @@ input[type="submit"]{
         top: 1px;
     }
 
+    .input__checkboxTwo:checked + label:after,
+    .input__checkboxTwo:not(:checked) + label:after{
+        left: -22px;
+        top: 5px;
+        width: 10px;
+        height: 6px;
+        border-radius: 1px;
+        border-left: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
     .input__checkbox:checked + label:after,
     .input__checkboxTwo:checked + label:after{
         opacity: 1;
@@ -1433,16 +1433,49 @@ input[type="submit"]{
         padding-top: 14px;
     }
 
-
+    .footer__contacts{
+        max-width: 1920px;
+        width: 100%;
+        height: 240px;
+        background-color: rgba(32, 32, 32, 1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0 66px;
+    }
 
     .footer__logo{
-        width: 61px;
-        height: 117px;
+        width: 158px;
+        height: 84px;
+        margin:0 0 0 405px;
     }
 
-    .footer__logotext{
-        width: 10px;
-        height: 158px;
+    .footer__images{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+
+    .footer__blockOne, .footer__blockTwo,
+    .footer__map{
+        margin:0
+    }
+
+    .footer__blockOne{
+        margin-left: 126px;
+        align-items: flex-start;
+    }
+
+    .footer__blockTwo{
+        margin-left: 114px;
+        align-items: flex-start;
+    }
+
+    .footer__map{
+        margin: 0 auto 0 93px;
+    }
+
+    
 
 }
