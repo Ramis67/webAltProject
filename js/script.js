@@ -25,3 +25,22 @@ arrowUp.addEventListener('click', function(){
     state = 'none';
 	}
 })
+
+
+const openPopUp = document.querySelector('.desktop__detailed');
+const popUp = document.querySelector('.popUp');
+const popUpContainer = document.querySelector('.popUpContainer');
+const popUpBody = document.querySelector('.popUpBody');
+
+openPopUp.addEventListener('click', function(){
+  popUp.classList.add('active');
+})
+
+popUpContainer.addEventListener('click', function(event){
+    if (event.target === popUpBody){
+      popUp.classList.add('active');
+    }
+    else {
+      popUp.classList.remove('active');
+    }
+})
